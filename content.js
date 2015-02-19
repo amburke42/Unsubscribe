@@ -43,8 +43,7 @@ chrome.runtime.onMessage.addListener(function(msg, sender, response) {
 			url: href
 		};
 
-		/* Directly respond to the sender (popup), 
-         * through the specified callback */
+		// Directly respond to the sender (popup) through setInfo()
         response(info);
     }
 
