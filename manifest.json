@@ -1,0 +1,28 @@
+{
+  "manifest_version":2,
+
+  "name": "Unsubscribe",
+  "description": "This extension unsubscribes a user from an email subscription",
+  "version": "0.1",
+
+ "background": {
+      "persistent": false,
+      "scripts": ["background.js"]
+  },
+
+  "content_scripts": [{
+    "matches": ["https://mail.google.com/*", "https://mail.live.com/*", "https://mail.yahoo.com/*"], //Gmail, Outlook, Yahoo
+    "js": ["content.js"]
+    }
+  ],
+
+  "page_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Unsubscribe Here!"
+  },
+
+  "permissions": [
+    "activeTab" 
+  ]
+}
