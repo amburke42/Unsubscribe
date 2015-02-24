@@ -6,7 +6,7 @@ function setInfo(info) {
     var isLink = info.isLink;
     url = info.url;
     if (isLink){
-        setStatus("Are you sure you want to unsubscribe?");
+        setStatus("");
         document.getElementById('yesButton').style.display = 'inline';
         document.getElementById('noButton').style.display = 'inline';
     
